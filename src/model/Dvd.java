@@ -19,8 +19,8 @@ public class Dvd extends ItemBiblioteca{
     return 3;
     }
 
-    public Dvd(CategoriaItem categoria, StatusItem status, int anoPublicacao, String autor, String titulo) {
-        super(categoria, status, anoPublicacao, autor, titulo);
+    public Dvd(CategoriaItem categoria, StatusItem status, int anoPublicacao, String autor, String titulo, String codigo, int quantidadeDisponivel) {
+        super(categoria, status, anoPublicacao, autor, titulo, codigo, quantidadeDisponivel);
     }
 
     public int getDuracao() {
@@ -49,7 +49,7 @@ public class Dvd extends ItemBiblioteca{
 
     @Override
     public String toString() {
-        return "Dvd{" +
+        return super.toString() + "|" +  " Dvd - " +
                 "duracao=" + duracao +
                 ", diretor='" + diretor + '\'' +
                 ", classificacao=" + classificacao +

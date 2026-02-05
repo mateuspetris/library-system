@@ -22,8 +22,9 @@ public class Livro extends ItemBiblioteca {
 
     }
 
-    public Livro(CategoriaItem categoria, StatusItem status, int anoPublicacao, String autor, String titulo, String isbn, int numeroPaginas, String editora) {
-        super(categoria, status, anoPublicacao, autor, titulo);
+
+    public Livro(CategoriaItem categoria, StatusItem status, int anoPublicacao, String autor, String titulo, String codigo, int quantidadeDisponivel, String isbn, int numeroPaginas, String editora) {
+        super(categoria, status, anoPublicacao, autor, titulo, codigo, quantidadeDisponivel);
         this.isbn = isbn;
         this.numeroPaginas = numeroPaginas;
         this.editora = editora;
@@ -51,10 +52,11 @@ public class Livro extends ItemBiblioteca {
 
     @Override
     public String toString() {
-        return "Livro{" +
+        return super.toString() + "Livro{" +
                 "isbn='" + isbn + '\'' +
                 ", numeroPaginas=" + numeroPaginas +
-                ", editora='" + editora + '\'' +
+                ", editora='" + editora +
                 '}';
     }
+
 }

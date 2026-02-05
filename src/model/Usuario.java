@@ -2,6 +2,7 @@ package model;
 
 import enums.TipoUsuario;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
@@ -45,8 +46,8 @@ public abstract class Usuario {
         this.cpf = cpf;
         this.nome = nome;
         this.tipoUsuario = tipoUsuario;
-        this.emprestimosAtivos = emprestimosAtivos;
-        this.historicoEmprestimos = historicoEmprestimos;
+        this.emprestimosAtivos = new ArrayList<>();
+        this.historicoEmprestimos = new Stack<>();
         this.multasPendentes = multasPendentes;
     }
 

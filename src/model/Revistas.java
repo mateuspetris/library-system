@@ -18,8 +18,8 @@ public class Revistas extends ItemBiblioteca{
         return 1;
     }
 
-    public Revistas(CategoriaItem categoria, StatusItem status, int anoPublicacao, String autor, String titulo, String mesPublicacao, int edicao) {
-        super(categoria, status, anoPublicacao, autor, titulo);
+    public Revistas(CategoriaItem categoria, StatusItem status, int anoPublicacao, String autor, String titulo, String codigo, int quantidadeDisponivel, String mesPublicacao, int edicao) {
+        super(categoria, status, anoPublicacao, autor, titulo, codigo, quantidadeDisponivel);
         this.mesPublicacao = mesPublicacao;
         this.edicao = edicao;
     }
@@ -42,7 +42,7 @@ public class Revistas extends ItemBiblioteca{
 
     @Override
     public String toString() {
-        return "Revistas{" +
+        return super.toString() + "Revistas{" +
                 "edicao=" + edicao +
                 ", mesPublicacao='" + mesPublicacao + '\'' +
                 '}';

@@ -8,6 +8,7 @@ public abstract class ItemBiblioteca {
     // TODO - ATRIBUTOS QUE INCLUEM CÓDIGOS SEPARANDO REVISTAS DE LIVROS
     private String titulo;
     private String autor;
+    final String codigo;
     private int anoPublicacao;
     private int quantidadeDisponivel;
     private StatusItem status;
@@ -35,12 +36,17 @@ public abstract class ItemBiblioteca {
 
     // TODO - CONSTRUTORES PARA INICIALIZAR OS ATRIBUTOS. UM NO ARGS E OUTRO ALL ARGS E GETTERS E SETTERS s
 
-    public ItemBiblioteca(CategoriaItem categoria, StatusItem status, int anoPublicacao, String autor, String titulo) {
+
+
+
+    public ItemBiblioteca(CategoriaItem categoria, StatusItem status, int anoPublicacao, String autor, String titulo, String codigo, int quantidadeDisponivel) {
         this.categoria = categoria;
         this.status = status;
         this.anoPublicacao = anoPublicacao;
         this.autor = autor;
         this.titulo = titulo;
+        this.codigo = codigo;
+        this.quantidadeDisponivel = quantidadeDisponivel;
     }
 
     public String getTitulo() {
@@ -57,6 +63,10 @@ public abstract class ItemBiblioteca {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public String getCodigo(){
+        return codigo;
     }
 
     public int getAnoPublicacao() {
@@ -83,6 +93,13 @@ public abstract class ItemBiblioteca {
         this.categoria = categoria;
     }
 
+    public int getQuantidadeDisponivel() {
+        return quantidadeDisponivel;
+    }
+
+    public void setQuantidadeDisponivel(int quantidadeDisponivel) {
+        this.quantidadeDisponivel = quantidadeDisponivel;
+    }
 
     @Override
     public String toString() {
