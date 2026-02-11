@@ -1,8 +1,12 @@
 package repository;
 
+import enums.CategoriaItem;
+import enums.StatusItem;
 import model.ItemBiblioteca;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 public class ItemRepository {
 
@@ -12,8 +16,8 @@ public class ItemRepository {
         itens.add(itemBiblioteca);
     }
 
-    public void remover(String codigo){
-        itens.remove(codigo);
+    public void remover(ItemBiblioteca itemBiblioteca){
+        itens.remove(itemBiblioteca);
     }
 
     public ItemBiblioteca buscarPorCodigo(String codigo){
@@ -33,6 +37,26 @@ public class ItemRepository {
             }
         }
         return null;
+    }
+
+    public List<ItemBiblioteca> ListarDisponiveis(){
+        List<ItemBiblioteca> disponiveis = new ArrayList<>();
+        for(ItemBiblioteca item : itens){
+            if(item.getStatus() == StatusItem.DISPONIVEL){
+                disponiveis.add(item);
+            }
+        }
+        return disponiveis;
+    }
+
+    public List<ItemBiblioteca> ListarCategoria(CategoriaItem categoria){
+        List<ItemBiblioteca> categorias = new ArrayList<>();
+        for(ItemBiblioteca item : itens){
+            if(item.getCategoria().equals(categoria)){
+                categorias.add(item);
+            }
+        }
+        return categorias;
     }
 
     public void listarTodos(){
@@ -58,4 +82,5 @@ public class ItemRepository {
     public void setItens(HashSet<ItemBiblioteca> itens) {
         this.itens = itens;
     }
+
 }

@@ -40,6 +40,10 @@ public class UsuarioRepository {
         return buscarPorCpf(cpf) != null;
     }
 
+    public HashSet<Usuario> getUsuario(){
+        return usuario;
+    }
+
 
 
 

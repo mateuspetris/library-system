@@ -1,5 +1,6 @@
 package model;
 
+import dto.Emprestimo;
 import enums.TipoUsuario;
 
 import java.util.ArrayList;
@@ -10,7 +11,6 @@ public abstract class Usuario {
 
     final String cpf;
     private String nome;
-    private String email;
     private TipoUsuario tipoUsuario;
     private List<Emprestimo> emprestimosAtivos;
     private Stack<Emprestimo> historicoEmprestimos;

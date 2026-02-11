@@ -1,5 +1,6 @@
 package model;
 
+import dto.Emprestimo;
 import enums.TipoUsuario;
 
 import java.util.List;

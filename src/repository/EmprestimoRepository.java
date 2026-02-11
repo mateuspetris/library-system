@@ -1,6 +1,6 @@
 package repository;
 
-import model.Emprestimo;
+import dto.Emprestimo;
 import model.Usuario;
 
 import java.util.ArrayList;
